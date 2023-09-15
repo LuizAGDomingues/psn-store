@@ -1,21 +1,27 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 import { HomeComponent } from './home.component';
+import { GameCardComponent } from 'src/app/components/game-card/game-card.component';
 
 describe('HomeComponent', () => {
-  let component: HomeComponent;
-  let fixture: ComponentFixture<HomeComponent>;
-
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [HomeComponent]
+      imports: [RouterTestingModule],
+      declarations: [HomeComponent, GameCardComponent]
     });
-    fixture = TestBed.createComponent(HomeComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should create the div and GameCardComponent', () => {
+    const fixture = TestBed.createComponent(HomeComponent);
+    fixture.detectChanges();
+
+    const compiled = fixture.debugElement.nativeElement;
+    const divElement = compiled.querySelector('.home_container');
+
+    expect(divElement).toBeTruthy();
+
+    const gameCardComponent = divElement.querySelector('app-game-card');
+
+    expect(gameCardComponent).toBeTruthy();
   });
 });
