@@ -10,19 +10,24 @@ describe('GameCardComponent', () => {
     });
   });
 
-  const fixture = TestBed.createComponent(CardLabelComponent);
-  fixture.detectChanges();
-  const compiled = fixture.debugElement.nativeElement;
-  
-  it('should create the div elements and the p element', () => {
-    const divContainerElement = compiled.querySelector('.card-label_container');
-    expect(divContainerElement).toBeTruthy();
-
-    const divContentElement = divContainerElement.querySelector('.card-label_content');
-    expect(divContentElement).toBeTruthy();
-
-    const imgElement = divContentElement.querySelector('p');
-    expect(imgElement).toBeTruthy();
+  it('should create the app', () => {
+    const fixture = TestBed.createComponent(CardLabelComponent);
+    const app = fixture.componentInstance;
+    expect(app).toBeTruthy();
   });
 
+  it('should render div elements', () => {
+    const fixture = TestBed.createComponent(CardLabelComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('.card-label_container')).toBeTruthy();
+    expect(compiled.querySelector('.card-label_content')).toBeTruthy();
+  });
+
+  it('should render p element', () => {
+    const fixture = TestBed.createComponent(CardLabelComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('p')).toBeTruthy();
+  });
 });

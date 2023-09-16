@@ -12,27 +12,35 @@ describe('GameCardComponent', () => {
     });
   });
 
-  const fixture = TestBed.createComponent(GameCardComponent);
-  fixture.detectChanges();
-  const compiled = fixture.debugElement.nativeElement;
-  const aElement = compiled.querySelector('.card_container');
-
-  it('should create the a element', () => {
-    expect(aElement).toBeTruthy();
+  it('sgound create the app', () => {
+    const fixture = TestBed.createComponent(GameCardComponent);
+    const app = fixture.componentInstance;
+    expect(app).toBeTruthy();
   });
 
-  it('should create the img element', () => {
-    const imgElement = aElement.querySelector('.card_img');
-    expect(imgElement).toBeTruthy();
+  it('should render p element', () => {
+    const fixture = TestBed.createComponent(GameCardComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('a')).toBeTruthy();
   });
 
-  it('should create the CardLabel component', () => {
-    const cardLabelElement = aElement.querySelector('app-card-label');
-    expect(cardLabelElement).toBeTruthy();
+  it('should render p element', () => {
+    const fixture = TestBed.createComponent(GameCardComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('img')).toBeTruthy();
   });
 
-  it('should create the img element', () => {
-    const cardPricingElement = aElement.querySelector('app-card-pricing');
-    expect(cardPricingElement).toBeTruthy();
+  it('should render GameCardComponent', () => {
+    const fixture = TestBed.createComponent(CardLabelComponent);
+    const app = fixture.componentInstance;
+    expect(app).toBeTruthy();
+  });
+
+  it('should render GameCardComponent', () => {
+    const fixture = TestBed.createComponent(CardPricingComponent);
+    const app = fixture.componentInstance;
+    expect(app).toBeTruthy();
   });
 });

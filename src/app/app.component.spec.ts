@@ -3,11 +3,14 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
+import { GameCardComponent } from './components/game-card/game-card.component';
+import { CardLabelComponent } from 'src/app/components/game-card/card-label/card-label.component';
+import { CardPricingComponent } from 'src/app/components/game-card/card-pricing/card-pricing.component';
 
-describe('HomeComponent', () => {
+describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
     imports: [RouterTestingModule],
-    declarations: [AppComponent, HomeComponent, MenuBarComponent]
+    declarations: [AppComponent, HomeComponent, MenuBarComponent, GameCardComponent, CardLabelComponent, CardPricingComponent]
   }));
 
   it('should create the app', () => {
