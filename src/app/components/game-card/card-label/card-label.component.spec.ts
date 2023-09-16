@@ -30,4 +30,20 @@ describe('GameCardComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('p')).toBeTruthy();
   });
+
+  it(`should have gameLabel property`, () => {
+    const fixture = TestBed.createComponent(CardLabelComponent);
+    const app = fixture.componentInstance;
+    expect(app.gameLabel).toBeDefined();
+  });
+
+  it('should render gameLabel as "DIGITAL"', () => {
+    const fixture = TestBed.createComponent(CardLabelComponent);
+    const app = fixture.componentInstance;
+    app.gameLabel = 'DIGITAL';
+    
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('.card-label_content p')?.textContent).toContain('DIGITAL');
+  });
 });

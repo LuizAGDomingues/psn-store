@@ -47,4 +47,23 @@ describe('GameCardComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('p')).toBeTruthy();
   });
+
+  it(`should have gameType and gamePrice properties`, () => {
+    const fixture = TestBed.createComponent(CardPricingComponent);
+    const app = fixture.componentInstance;
+    expect(app.gameType).toBeDefined();
+    expect(app.gamePrice).toBeDefined();
+  });
+
+  it('should render "" in gameType and "" gamePrice', () => {
+    const fixture = TestBed.createComponent(CardPricingComponent);
+    const app = fixture.componentInstance;
+    app.gameType = 'DIGITAL | PS3';
+    app.gamePrice = 'R$ 129,99';
+    
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('.card-pricing_value_console p')?.textContent).toContain('DIGITAL | PS3');
+    expect(compiled.querySelector('.card-pricing_value_money p')?.textContent).toContain('R$ 129,99');
+  });
 });

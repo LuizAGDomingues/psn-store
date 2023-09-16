@@ -1,27 +1,52 @@
-# PsnStore
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+# PSN Store
 
-## Development server
+Este projeto recria a interface inicial da psn-store, loja virtual de jogos da PlayStation. Foi feito para o desafio de projeto do bootcamp Santander 2023 na DIO. Utilizei este projeto para aprender e aplicar conceitos de testes unitários em Angular, todos os componentes criados foram testados. Além disso alterei CSS que achei pertinente e adicionei responsividade.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Referência
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- [DIO](https://web.dio.me/welcome/)
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Stack utilizada
 
-## Running unit tests
+**Front-end:** Angular
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Demonstração
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+<img src="src/assets/landingPage.PNG" />
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Rodando localmente
+
+Clone o projeto
+
+```bash
+  git clone https://github.com/LuizAGDomingues/psn-store
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd psn-store
+```
+
+Instale as dependências
+
+```bash
+  npm install
+```
+
+Inicie o servidor
+
+```bash
+  ng serve
+```
+
+
+## Autor
+
+- [@LuizAGDomingues](https://github.com/LuizAGDomingues)
+

@@ -23,6 +23,7 @@
 
 .menu-bar_item > ul{
   display: flex;
+  transform: translateX(-25%);
 }
 
 .menu-bar_item > ul > li{
@@ -39,4 +40,15 @@
 .menu-bar_item > ul > li > a:hover{
   color: blue;
   font-weight: 600;
+}
+
+@media screen and (max-width: 800px) {
+  .menu-bar_logo{
+    width: 30px;
+    overflow: hidden;
+  }
+
+  .menu-bar_item > ul{
+    margin-left: 80px;
+  }
 }
